@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <!-- flatpickr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/ko.js"></script>
+    <!-- js -->
+    <script src="./assets/js/common.js"></script>
+
+    <link rel="stylesheet" href="./assets/scss/common.css" />
+  </head>
+  <body>
+    <div class="isu">
+      <div id="header"></div>
+      <div class="isu-contents">
+        <div class="isu-contents-head">
+          <div class="isu-contents-head__start">
+            <h1>재배 상세</h1>
+          </div>
+          <div class="isu-contents-head__end">
+            <button
+              type="button"
+              class="btn btn-lg btn-primary ms-2"
+              style="min-width: 96px"
+            >
+              재배 시작
+            </button>
+            <button
+              type="button"
+              class="btn btn-lg btn-dark ms-2"
+              style="min-width: 96px"
+            >
+              재배 종료
+            </button>
+            <button
+              type="button"
+              class="btn btn-lg btn-outline-secondary ms-2"
+              style="min-width: 96px"
+            >
+              수정
+            </button>
+            <button
+              type="button"
+              class="btn btn-lg btn-outline-secondary ms-2"
+              style="min-width: 96px"
+            >
+              삭제
+            </button>
+          </div>
+        </div>
+        <h3>재배 기본 정보</h3>
+        <div class="isu-contents-view">
+          <table class="table">
+            <colgroup>
+              <col style="width: 200px" />
+              <col style="width: 1040px" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>재배명</th>
+                <td>죽향 촉성 재배</td>
+              </tr>
+              <tr>
+                <th>레시피 명</th>
+                <td>죽향 딸기 기본 레시피</td>
+              </tr>
+              <tr>
+                <th>재배 상태</th>
+                <td>시작</td>
+              </tr>
+              <tr>
+                <th>재배 단계</th>
+                <td>육묘 단계</td>
+              </tr>
+              <tr>
+                <th>적용 구역(전체 구역)</th>
+                <td>
+                  제어기 : 온실 1 구역, 온실 2 구역, 온실 3 구역, 온실 4 구역
+                  <br />
+                  양액 : 온실 1 구역, 온실 2 구역, 온실 3
+                </td>
+              </tr>
+              <tr>
+                <th>등록자</th>
+                <td>재배사</td>
+              </tr>
+              <tr>
+                <th>등록일시</th>
+                <td>2024.05.20</td>
+              </tr>
+              <tr>
+                <th>재배 시작 일자</th>
+                <td>2024.05.01</td>
+              </tr>
+              <tr>
+                <th>재배 종료 일자</th>
+                <td>2024.10.30</td>
+              </tr>
+              <tr>
+                <th>재배 적용 기간</th>
+                <td>2024.05.01 ~ 2024.10.30</td>
+              </tr>
+              <tr>
+                <th>설명</th>
+                <td>
+                  죽향 딸기 기본 레시피를 살짝 변형한,<br />
+                  촉성 재배를 위한 환경관리 시험용 재배.<br />
+                  <br />
+                  지난 재배의 광 조건 및 온도 조건을 10%정도 더 가혹하게 임의
+                  스트레스 주면서 재배 예정.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="d-flex justify-content-between mb-3">
+          <h3 class="mb-0">재배 이력 정보</h3>
+          <button
+            type="button"
+            class="btn btn-lg btn-primary ms-2"
+            style="min-width: 96px"
+          >
+            할 일 등록
+          </button>
+        </div>
+        <div class="isu-history mb-4">
+          <div class="isu-history-calendar">
+            <input
+              class="form-control flatpickr flatpickr-inline"
+              type="text"
+              readonly="readonly"
+            />
+          </div>
+          <div class="isu-history-contents">
+            <div class="isu-form">
+              <div class="isu-form-item">
+                <div
+                  class="d-flex align-items-end justify-content-between mb-2"
+                >
+                  <label class="form-label mb-0">할 일</label>
+                  <div class="d-flex">
+                    <button type="button" class="btn btn-dark btn-sm ms-1">
+                      완료 처리
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary btn-sm ms-1"
+                    >
+                      수정
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary btn-sm ms-1"
+                    >
+                      삭제
+                    </button>
+                  </div>
+                </div>
+                <input type="text" class="form-control form-control-lg w-100" />
+              </div>
+              <div class="isu-form-item">
+                <label class="form-label">요청 정보</label>
+                <textarea class="form-control" style="height: 72px"></textarea>
+              </div>
+              <div class="isu-form-item">
+                <div class="isu-history-list">
+                  <label class="form-label">진행 상황</label>
+                  <ul>
+                    <li>
+                      <p>
+                        3도 낮췄습니다. 2도면 충분할 것 같습니다만 생육상태 계속
+                        관찰하겠습니다.
+                        <span>05/21 12:24:12</span>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        추가로 2도 더 낮췄습니다.
+                        <span>05/21 12:24:12</span>
+                      </p>
+                    </li>
+                  </ul>
+                  <input
+                    type="text"
+                    class="form-control form-control-lg w-100"
+                    placeholder="전송 메세지 입력"
+                  />
+                </div>
+              </div>
+              <div class="isu-form-item">
+                <label class="form-label">재배 기록</label>
+                <input
+                  type="text"
+                  class="form-control form-control-lg w-100"
+                  value="구역 온도 설정 3도 낮추기"
+                  readonly
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-end justify-content-between pb-1 mb-2">
+          <h3 class="mb-0">할 일 목록</h3>
+          <button
+            type="button"
+            class="btn btn-outline-secondary ms-2"
+            style="min-width: 96px"
+          >
+            삭제
+          </button>
+        </div>
+        <div class="isu-contents-list">
+          <table class="table">
+            <colgroup>
+              <col style="width: 56px" />
+              <col style="width: 153px" />
+              <col style="width: 400px" />
+              <col style="width: 122px" />
+              <col style="width: 96px" />
+              <col style="width: 96px" />
+              <col style="width: 96px" />
+              <col style="width: 96px" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">번호</th>
+                <th scope="col">할 일 번호</th>
+                <th scope="col">할 일</th>
+                <th scope="col">단계 진입 후 경과일</th>
+                <th scope="col">반복 유형</th>
+                <th scope="col">패턴</th>
+                <th scope="col">등록자</th>
+                <th scope="col">등록일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>1</td>
+                <td>매주</td>
+                <td>월,화,수,목</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>1</td>
+                <td>매주</td>
+                <td>월,화,수,목</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>1</td>
+                <td>매주</td>
+                <td>월,화,수,목</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>1</td>
+                <td>매주</td>
+                <td>월,화,수,목</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>1</td>
+                <td>매주</td>
+                <td>월,화,수,목</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>1</td>
+                <td>매주</td>
+                <td>월,화,수,목</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>1</td>
+                <td>매주</td>
+                <td>월,화,수,목</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div
+        style="
+          position: fixed;
+          bottom: 0;
+          right: 0;
+          padding: 20px;
+          background: rgba(0, 0, 0, 0.5);
+        "
+      >
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#modal01"
+        >
+          재배 관리 – 재배 단계 변경(팝업)
+        </button>
+        <br />
+        <button
+          type="button"
+          class="btn btn-primary mt-2"
+          data-bs-toggle="modal"
+          data-bs-target="#modal02"
+        >
+          재배 관리 – 할 일 등록,수정(팝업)
+        </button>
+        <br />
+        <button
+          type="button"
+          class="btn btn-primary mt-2"
+          data-bs-toggle="modal"
+          data-bs-target="#modal03"
+        >
+          재배 관리 – 재배 수정(팝업)
+        </button>
+        <br />
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="modal01" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-4" id="modal01Label">재배 단계 변경</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-4">
+                죽향 촉성 재배의 레시피 단계를 변경합니다.<br />
+                변경한 단계는 적용된 모든 구역에 반영됩니다.
+              </div>
+              <div class="isu-form">
+                <div class="isu-form-item">
+                  <label class="form-label">재배 단계</label>
+                  <select class="form-select">
+                    <option selected>전체</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-lg btn-outline-secondary"
+                data-bs-dismiss="modal"
+                style="width: 120px"
+              >
+                취소
+              </button>
+              <button
+                type="button"
+                class="btn btn-lg btn-primary"
+                style="width: 120px"
+              >
+                저장
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="modal02" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-4" id="modal02Label">할 일 등록</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="isu-form">
+                <div class="isu-form-item">
+                  <label class="form-label"
+                    >할 일 번호 <span class="required">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control form-control-lg w-100"
+                  />
+                </div>
+                <div class="isu-form-item">
+                  <label class="form-label">할 일 제목 </label>
+                  <input
+                    type="text"
+                    class="form-control form-control-lg w-100"
+                  />
+                </div>
+                <div class="isu-form-item">
+                  <label class="form-label">내용</label>
+                  <textarea class="form-control" style="height: 120px">
+                  </textarea>
+                </div>
+                <div class="isu-form-item">
+                  <label class="form-label"
+                    >반복유형 <span class="required">*</span></label
+                  >
+                  <div class="d-flex">
+                    <select class="form-select w-auto">
+                      <option selected>선택</option>
+                      <option value="1">매주</option>
+                    </select>
+                    <div class="d-flex">
+                      <div class="form-check m-0 ms-4">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="checkbox01"
+                        />
+                        <label class="form-check-label" for="checkbox01">
+                          월
+                        </label>
+                      </div>
+                      <div class="form-check m-0 ms-4">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="checkbox02"
+                        />
+                        <label class="form-check-label" for="checkbox02">
+                          화
+                        </label>
+                      </div>
+                      <div class="form-check m-0 ms-4">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="checkbox03"
+                        />
+                        <label class="form-check-label" for="checkbox03">
+                          수
+                        </label>
+                      </div>
+                      <div class="form-check m-0 ms-4">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="checkbox04"
+                        />
+                        <label class="form-check-label" for="checkbox04">
+                          목
+                        </label>
+                      </div>
+                      <div class="form-check m-0 ms-4">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="checkbox05"
+                        />
+                        <label class="form-check-label" for="checkbox05">
+                          금
+                        </label>
+                      </div>
+                      <div class="form-check m-0 ms-4">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="checkbox06"
+                        />
+                        <label class="form-check-label" for="checkbox06">
+                          토
+                        </label>
+                      </div>
+                      <div class="form-check m-0 ms-4">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="checkbox07"
+                        />
+                        <label class="form-check-label" for="checkbox07">
+                          일
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="isu-form-item">
+                  <label class="form-label">피드백 사용</label>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="checkbox08"
+                    />
+                    <label class="form-check-label" for="checkbox08">
+                      체크하면, 재배자에게 작업 결과 촬영을 요청합니다.
+                    </label>
+                  </div>
+                </div>
+                <div class="isu-form-item">
+                  <label class="form-label">가이드 링크</label>
+                  <input
+                    type="text"
+                    class="form-control form-control-lg w-100"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-lg btn-outline-secondary"
+                data-bs-dismiss="modal"
+                style="width: 120px"
+              >
+                취소
+              </button>
+              <button
+                type="button"
+                class="btn btn-lg btn-primary"
+                style="width: 120px"
+              >
+                등록
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="modal03" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-4" id="modal03Label">재배 수정</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="isu-form">
+                <div class="isu-form-item">
+                  <label class="form-label"
+                    >재배 번호 <span class="required">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control form-control-lg w-100"
+                    value="C00000000001"
+                    readonly
+                  />
+                </div>
+
+                <div class="isu-form-item">
+                  <label class="form-label"
+                    >재배 적용 기간 <span class="required">*</span></label
+                  >
+                  <div class="d-flex align-items-center">
+                    <input
+                      class="form-control flatpickr flatpickr-input"
+                      type="text"
+                      readonly="readonly"
+                    />
+                    <span class="mx-2">-</span>
+                    <input
+                      class="form-control flatpickr flatpickr-input"
+                      type="text"
+                      readonly="readonly"
+                    />
+                  </div>
+                </div>
+                <div class="isu-form-item">
+                  <label class="form-label">설명</label>
+                  <textarea class="form-control" style="height: 120px">
+UAE 지역 수직농장 여름 재배용 죽항 레시피.
+광 조건과 온도 조건 실증을 위한 실험 레시피                  
+                </textarea
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-lg btn-outline-secondary"
+                data-bs-dismiss="modal"
+                style="width: 120px"
+              >
+                취소
+              </button>
+              <button
+                type="button"
+                class="btn btn-lg btn-primary"
+                style="width: 120px"
+              >
+                수정
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

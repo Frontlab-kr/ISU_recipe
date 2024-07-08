@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <!-- flatpickr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/ko.js"></script>
+    <!-- js -->
+    <script src="./assets/js/common.js"></script>
+
+    <link rel="stylesheet" href="./assets/scss/common.css" />
+  </head>
+  <body>
+    <div class="isu">
+      <div id="header"></div>
+      <div class="isu-contents">
+        <div class="isu-contents-head">
+          <div class="isu-contents-head__start">
+            <h1>레시피 상세</h1>
+          </div>
+          <div class="isu-contents-head__end">
+            <button
+              type="button"
+              class="btn btn-lg btn-primary ms-2"
+              style="min-width: 96px"
+            >
+              재배 시작
+            </button>
+            <button
+              type="button"
+              class="btn btn-lg btn-dark ms-2"
+              style="min-width: 96px"
+            >
+              재배 종료
+            </button>
+            <button
+              type="button"
+              class="btn btn-lg btn-outline-secondary ms-2"
+              style="min-width: 96px"
+            >
+              수정
+            </button>
+            <button
+              type="button"
+              class="btn btn-lg btn-outline-secondary ms-2"
+              style="min-width: 96px"
+            >
+              삭제
+            </button>
+          </div>
+        </div>
+        <h3>레시피 기본 정보</h3>
+        <div class="isu-contents-view">
+          <table class="table">
+            <colgroup>
+              <col style="width: 200px" />
+              <col style="width: 1040px" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>레시피 명</th>
+                <td>죽향 UAE 촉성 재배</td>
+              </tr>
+              <tr>
+                <th>설명</th>
+                <td>
+                  UAE 지역 수직농장 여름 재배용 죽향 레시피<br />
+                  광 조건과 온도 조건 실증을 위한 실험 레시피
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>단계 구성<span>단계별 정보를 확인하세요.</span></h3>
+        <div class="isu-step mb-3 pt-1">
+          <ul>
+            <li class="active">육모 단계</li>
+            <li>분포 단계</li>
+            <li>정리 단계</li>
+          </ul>
+        </div>
+        <div class="isu-detail mb-4">
+          <div class="isu-detail-list">
+            <div class="isu-detail-list__title">환경제어 옵션</div>
+            <div class="isu-detail-list__list">
+              <ul>
+                <li>온도</li>
+                <li class="active">습도</li>
+                <li>양액공급</li>
+                <li>옵션</li>
+                <li>옵션</li>
+                <li>옵션</li>
+                <li>옵션</li>
+                <li>옵션</li>
+                <li>옵션</li>
+                <li>옵션</li>
+                <li>옵션</li>
+                <li>옵션</li>
+                <li>옵션</li>
+                <li>옵션</li>
+              </ul>
+            </div>
+          </div>
+          <div class="isu-detail-view">
+            <div class="isu-detail-view__inner">
+              <p class="text-danger">습도 JSON 구조 파라미터 정보 노출</p>
+              <p class="text-danger">습도 JSON 구조 파라미터 정보 노출</p>
+              <p class="text-danger">습도 JSON 구조 파라미터 정보 노출</p>
+              <p class="text-danger">습도 JSON 구조 파라미터 정보 노출</p>
+              <p class="text-danger">습도 JSON 구조 파라미터 정보 노출</p>
+              <p class="text-danger">습도 JSON 구조 파라미터 정보 노출</p>
+              <p class="text-danger">습도 JSON 구조 파라미터 정보 노출</p>
+              <p class="text-danger">습도 JSON 구조 파라미터 정보 노출</p>
+              <p class="text-danger">습도 JSON 구조 파라미터 정보 노출</p>
+              <p class="text-danger">습도 JSON 구조 파라미터 정보 노출</p>
+              <p class="text-danger">습도 JSON 구조 파라미터 정보 노출</p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-end justify-content-between pb-1 mb-2">
+          <h3 class="mb-0">할 일 목록</h3>
+          <button
+            type="button"
+            class="btn btn-outline-secondary ms-2"
+            style="min-width: 96px"
+          >
+            삭제
+          </button>
+        </div>
+        <div class="isu-contents-list">
+          <table class="table">
+            <colgroup>
+              <col style="width: 56px" />
+              <col style="width: 153px" />
+              <col style="width: 400px" />
+              <col style="width: 122px" />
+              <col style="width: 96px" />
+              <col style="width: 96px" />
+              <col style="width: 96px" />
+              <col style="width: 96px" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">번호</th>
+                <th scope="col">할 일 번호</th>
+                <th scope="col">할 일</th>
+                <th scope="col">단계 진입 후 경과일</th>
+                <th scope="col">반복 유형</th>
+                <th scope="col">패턴</th>
+                <th scope="col">등록자</th>
+                <th scope="col">등록일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>1</td>
+                <td>매주</td>
+                <td>월,화,수,목</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>1</td>
+                <td>매주</td>
+                <td>월,화,수,목</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>1</td>
+                <td>매주</td>
+                <td>월,화,수,목</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>1</td>
+                <td>매주</td>
+                <td>월,화,수,목</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>1</td>
+                <td>매주</td>
+                <td>월,화,수,목</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>1</td>
+                <td>매주</td>
+                <td>월,화,수,목</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>1</td>
+                <td>매주</td>
+                <td>월,화,수,목</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div
+        style="
+          position: fixed;
+          bottom: 0;
+          right: 0;
+          padding: 20px;
+          background: rgba(0, 0, 0, 0.5);
+        "
+      >
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#modal01"
+        >
+          레시피 수정
+        </button>
+        <br />
+        <button
+          type="button"
+          class="btn btn-primary mt-2"
+          data-bs-toggle="modal"
+          data-bs-target="#modal02"
+        >
+          레시피 삭제
+        </button>
+        <br />
+        <button
+          type="button"
+          class="btn btn-primary mt-2"
+          data-bs-toggle="modal"
+          data-bs-target="#modal03"
+        >
+          파일 업로드 이력
+        </button>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="modal01" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-4" id="modal01Label">레시피 수정</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="isu-form">
+                <div class="isu-form-item">
+                  <label class="form-label">레시피 번호</label>
+                  <input
+                    type="text"
+                    class="form-control form-control-lg w-100"
+                    value="R00000000001"
+                    readonly
+                  />
+                </div>
+                <div class="isu-form-item">
+                  <label class="form-label"
+                    >레시피 명 <span class="required">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control form-control-lg w-100"
+                    value="죽향 UAE 재배 레시피"
+                  />
+                </div>
+                <div class="isu-form-item">
+                  <label class="form-label">설명</label>
+                  <textarea class="form-control" style="height: 120px">
+UAE 지역 수직농장 여름 재배용 죽항 레시피.
+광 조건과 온도 조건 실증을 위한 실험 레시피
+                  </textarea>
+                </div>
+                <div class="isu-form-item">
+                  <div
+                    class="d-flex align-items-end justify-content-between mb-2"
+                  >
+                    <label class="form-label mb-0">환경제어 정보 업로드</label>
+                    <div class="d-flex">
+                      <button
+                        type="button"
+                        class="btn btn-outline-secondary btn-sm ms-1"
+                      >
+                        엑셀 템플릿 다운로드
+                      </button>
+                      <button type="button" class="btn btn-dark btn-sm ms-1">
+                        파일 유효성 검사
+                      </button>
+                    </div>
+                  </div>
+                  <div class="isu-filelist">
+                    <ul>
+                      <li>
+                        <p>
+                          죽향-환경제어-UAE.xslx죽향-환경제어-UAE.xslx죽향-환경제어-UAE.xslx죽향-환경제어-UAE.xslx
+                        </p>
+                        <button>4.21 KB</button>
+                      </li>
+                      <li>
+                        <p>죽향-환경제어-UAE.xslx</p>
+                        <button>4.21 KB</button>
+                      </li>
+                      <li>
+                        <p>죽향-환경제어-UAE.xslx</p>
+                        <button>4.21 KB</button>
+                      </li>
+                    </ul>
+                    <div class="isu-filelist-bottom">
+                      <button type="button" class="btn btn-link btn-sm">
+                        <i class="ico-plus-16 me-1"></i>파일 추가
+                      </button>
+                      <button type="button" class="btn btn-link btn-sm">
+                        <i class="ico-download-16 me-1"></i>파일 유효성 검사
+                        결과 다운로드
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="isu-form-item">
+                  <div
+                    class="d-flex align-items-end justify-content-between mb-2"
+                  >
+                    <label class="form-label mb-0">환경제어 정보 업로드</label>
+                    <div class="d-flex">
+                      <button
+                        type="button"
+                        class="btn btn-outline-secondary btn-sm ms-1"
+                      >
+                        엑셀 템플릿 다운로드
+                      </button>
+                      <button type="button" class="btn btn-dark btn-sm ms-1">
+                        파일 유효성 검사
+                      </button>
+                    </div>
+                  </div>
+                  <div class="isu-filelist">
+                    <ul>
+                      <li>
+                        <p>죽향-환경제어-UAE.xslx</p>
+                        <button>4.21 KB</button>
+                      </li>
+                      <li>
+                        <p>죽향-환경제어-UAE.xslx</p>
+                        <button>4.21 KB</button>
+                      </li>
+                    </ul>
+                    <div class="isu-filelist-bottom">
+                      <button type="button" class="btn btn-link btn-sm">
+                        <i class="ico-plus-16 me-1"></i>파일 추가
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-link btn-sm text-primary"
+                      >
+                        <i class="ico-confirm-16 me-1"></i>올바른 업로드
+                        파일입니다.
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="isu-form-item">
+                  <div
+                    class="d-flex align-items-end justify-content-between mb-2"
+                  >
+                    <label class="form-label mb-0">할 일 정보 업로드</label>
+                    <div class="d-flex">
+                      <button
+                        type="button"
+                        class="btn btn-outline-secondary btn-sm ms-1"
+                      >
+                        엑셀 템플릿 다운로드
+                      </button>
+                      <button type="button" class="btn btn-dark btn-sm ms-1">
+                        파일 유효성 검사
+                      </button>
+                    </div>
+                  </div>
+                  <div class="isu-filelist">
+                    <div class="isu-filelist-input">
+                      <input type="file" />
+                      <strong>파일 선택</strong>
+                      <p>* 지정된 형식의 파일만 업로드 가능합니다.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-lg btn-outline-secondary"
+                data-bs-dismiss="modal"
+                style="width: 120px"
+              >
+                취소
+              </button>
+              <button
+                type="button"
+                class="btn btn-lg btn-primary"
+                style="width: 120px"
+              >
+                등록
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal02" tabindex="-1">
+        <div
+          class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-4" id="modal02Label">레시피 삭제</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="text-center pt-4">
+                (문구 예시)<br />
+                레시피 정보를 삭제하시겠습니까?<br />
+                지워진 레시피는 새 재배를 만들 때 목록에 표시되지 않습니다.<br />
+                이미 적용되어 운영중인 레시피에는 적용되지 않습니다.<br />
+                레시피는 지워지면 복구되지 않으므로<br />
+                삭제 전에 레시피 정보를 다운받기를 권합니다.
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-lg btn-outline-secondary"
+                data-bs-dismiss="modal"
+                style="width: 120px"
+              >
+                취소
+              </button>
+              <button
+                type="button"
+                class="btn btn-lg btn-primary"
+                data-bs-dismiss="modal"
+                style="width: 120px"
+              >
+                확인
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal03" tabindex="-1">
+        <div
+          class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-4" id="modal03Label">
+                파일 업로드 이력
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body pt-0">
+              <div class="isu-contents-list">
+                <table class="table mb-0 border-top-0">
+                  <colgroup>
+                    <col style="width: 40px" />
+                    <col style="width: 113px" />
+                    <col style="width: 99px" />
+                    <col style="width: 238px" />
+                    <col style="width: 60px" />
+                    <col style="width: 148px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">번호</th>
+                      <th scope="col">업로드 번호</th>
+                      <th scope="col">옵로드 타입</th>
+                      <th scope="col">파일명</th>
+                      <th scope="col">등록자</th>
+                      <th scope="col">등록일</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>F00000000001</td>
+                      <td>환경제어</td>
+                      <td><a href="">설향 딸기 기본 업로드 파일.xlsx</a></td>
+                      <td>관리자</td>
+                      <td>2024-03-20 11:12:23</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>F00000000001</td>
+                      <td>환경제어</td>
+                      <td><a href="">설향 딸기 기본 업로드 파일.xlsx</a></td>
+                      <td>관리자</td>
+                      <td>2024-03-20 11:12:23</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>F00000000001</td>
+                      <td>환경제어</td>
+                      <td><a href="">설향 딸기 기본 업로드 파일.xlsx</a></td>
+                      <td>관리자</td>
+                      <td>2024-03-20 11:12:23</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-lg btn-primary"
+                style="width: 120px"
+              >
+                확인
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

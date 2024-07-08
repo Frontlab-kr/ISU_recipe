@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <!-- flatpickr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/ko.js"></script>
+    <!-- js -->
+    <script src="./assets/js/common.js"></script>
+
+    <link rel="stylesheet" href="./assets/scss/common.css" />
+  </head>
+  <body>
+    <div class="isu">
+      <div id="header"></div>
+      <div class="isu-contents">
+        <div class="isu-contents-head">
+          <div class="isu-contents-head__start">
+            <h1>레시피 목록</h1>
+          </div>
+          <div class="isu-contents-head__end">
+            <button
+              type="button"
+              class="btn btn-primary btn-lg"
+              style="width: 180px"
+            >
+              <i class="ico-plus me-2"></i>
+              레시피 등록
+            </button>
+          </div>
+        </div>
+        <div class="isu-contents-search">
+          <div class="isu-contents-search-form">
+            <div class="isu-contents-search-form__item">
+              <label class="form-label">레시피 명</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="레시피 명을 입력하세요."
+                style="width: 360px"
+              />
+            </div>
+            <div class="isu-contents-search-form__item">
+              <label class="form-label">권한 구분</label>
+              <select class="form-select">
+                <option selected>전체</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="isu-contents-search-form__item">
+              <label class="form-label">등록일</label>
+              <div class="d-flex align-items-center">
+                <input
+                  class="form-control flatpickr flatpickr-input"
+                  type="text"
+                  readonly="readonly"
+                />
+                <span class="mx-2">-</span>
+                <input
+                  class="form-control flatpickr flatpickr-input"
+                  type="text"
+                  readonly="readonly"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="isu-contents-search-button">
+            <button type="button" class="btn btn-dark" style="width: 120px">
+              조회
+            </button>
+          </div>
+        </div>
+        <div class="isu-contents-list">
+          <table class="table">
+            <colgroup>
+              <col style="width: 96px" />
+              <col style="width: 204px" />
+              <col style="width: 654px" />
+              <col style="width: 98px" />
+              <col style="width: 96px" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">레시피 목록</th>
+                <th scope="col">레시피 번호</th>
+                <th scope="col">레시피 명</th>
+                <th scope="col">등록자</th>
+                <th scope="col">등록일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>관리자</td>
+                <td>2024-03-20</td>
+              </tr>
+            </tbody>
+          </table>
+          <nav>
+            <ul class="pagination mb-0">
+              <li class="page-item">
+                <a class="page-link page-prev" href="#">이전 </a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item"><a class="page-link" href="#">6</a></li>
+              <li class="page-item"><a class="page-link" href="#">7</a></li>
+              <li class="page-item"><a class="page-link" href="#">8</a></li>
+              <li class="page-item"><a class="page-link" href="#">9</a></li>
+              <li class="page-item"><a class="page-link" href="#">10</a></li>
+              <li class="page-item">
+                <a class="page-link page-next" href="#"> 다음 </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div
+        style="
+          position: fixed;
+          bottom: 0;
+          right: 0;
+          padding: 20px;
+          background: rgba(0, 0, 0, 0.5);
+        "
+      >
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#modal01"
+        >
+          레시피 관리 – 레시피 등록(팝업)
+        </button>
+        <br />
+        <button
+          type="button"
+          class="btn btn-primary mt-2"
+          data-bs-toggle="modal"
+          data-bs-target="#modal02"
+        >
+          파일 유효성 검사 결과
+        </button>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="modal01" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-4" id="modal01Label">레시피 등록</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="isu-form">
+                <div class="isu-form-item">
+                  <label class="form-label">레시피 명</label>
+                  <input
+                    type="text"
+                    class="form-control form-control-lg w-100"
+                  />
+                </div>
+                <div class="isu-form-item">
+                  <label class="form-label">설명</label>
+                  <textarea
+                    class="form-control"
+                    style="height: 120px"
+                  ></textarea>
+                </div>
+                <div class="isu-form-item">
+                  <div
+                    class="d-flex align-items-end justify-content-between mb-2"
+                  >
+                    <label class="form-label mb-0">환경제어 정보 업로드</label>
+                    <div class="d-flex">
+                      <button
+                        type="button"
+                        class="btn btn-outline-secondary btn-sm ms-1"
+                      >
+                        엑셀 템플릿 다운로드
+                      </button>
+                      <button type="button" class="btn btn-dark btn-sm ms-1">
+                        파일 유효성 검사
+                      </button>
+                    </div>
+                  </div>
+                  <div class="isu-filelist">
+                    <ul>
+                      <li>
+                        <p>
+                          죽향-환경제어-UAE.xslx죽향-환경제어-UAE.xslx죽향-환경제어-UAE.xslx죽향-환경제어-UAE.xslx
+                        </p>
+                        <button>4.21 KB</button>
+                      </li>
+                      <li>
+                        <p>죽향-환경제어-UAE.xslx</p>
+                        <button>4.21 KB</button>
+                      </li>
+                      <li>
+                        <p>죽향-환경제어-UAE.xslx</p>
+                        <button>4.21 KB</button>
+                      </li>
+                    </ul>
+                    <div class="isu-filelist-bottom">
+                      <button type="button" class="btn btn-link btn-sm">
+                        <i class="ico-plus-16 me-1"></i>파일 추가
+                      </button>
+                      <button type="button" class="btn btn-link btn-sm">
+                        <i class="ico-download-16 me-1"></i>파일 유효성 검사
+                        결과 다운로드
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="isu-form-item">
+                  <div
+                    class="d-flex align-items-end justify-content-between mb-2"
+                  >
+                    <label class="form-label mb-0">환경제어 정보 업로드</label>
+                    <div class="d-flex">
+                      <button
+                        type="button"
+                        class="btn btn-outline-secondary btn-sm ms-1"
+                      >
+                        엑셀 템플릿 다운로드
+                      </button>
+                      <button type="button" class="btn btn-dark btn-sm ms-1">
+                        파일 유효성 검사
+                      </button>
+                    </div>
+                  </div>
+                  <div class="isu-filelist">
+                    <ul>
+                      <li>
+                        <p>죽향-환경제어-UAE.xslx</p>
+                        <button>4.21 KB</button>
+                      </li>
+                      <li>
+                        <p>죽향-환경제어-UAE.xslx</p>
+                        <button>4.21 KB</button>
+                      </li>
+                    </ul>
+                    <div class="isu-filelist-bottom">
+                      <button type="button" class="btn btn-link btn-sm">
+                        <i class="ico-plus-16 me-1"></i>파일 추가
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-link btn-sm text-primary"
+                      >
+                        <i class="ico-confirm-16 me-1"></i>올바른 업로드
+                        파일입니다.
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="isu-form-item">
+                  <div
+                    class="d-flex align-items-end justify-content-between mb-2"
+                  >
+                    <label class="form-label mb-0">할 일 정보 업로드</label>
+                    <div class="d-flex">
+                      <button
+                        type="button"
+                        class="btn btn-outline-secondary btn-sm ms-1"
+                      >
+                        엑셀 템플릿 다운로드
+                      </button>
+                      <button type="button" class="btn btn-dark btn-sm ms-1">
+                        파일 유효성 검사
+                      </button>
+                    </div>
+                  </div>
+                  <div class="isu-filelist">
+                    <div class="isu-filelist-input">
+                      <input type="file" />
+                      <strong>파일 선택</strong>
+                      <p>* 지정된 형식의 파일만 업로드 가능합니다.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-lg btn-outline-secondary"
+                data-bs-dismiss="modal"
+                style="width: 120px"
+              >
+                취소
+              </button>
+              <button
+                type="button"
+                class="btn btn-lg btn-primary"
+                style="width: 120px"
+              >
+                등록
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal02" tabindex="-1">
+        <div
+          class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-4" id="modal02Label">
+                파일 유효성 검사 결과
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="text-center pt-4">
+                (문구 예시)<br />
+                파일 유효성 검사가 실패하였습니다.<br />
+                유효성 검사 결과를 참고해 수정 후 다시 <br />
+                업로드 바랍니다.
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-lg btn-primary"
+                style="width: 120px"
+              >
+                확인
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

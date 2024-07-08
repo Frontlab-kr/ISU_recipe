@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <!-- flatpickr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/ko.js"></script>
+    <!-- js -->
+    <script src="./assets/js/common.js"></script>
+
+    <link rel="stylesheet" href="./assets/scss/common.css" />
+  </head>
+  <body>
+    <div class="isu">
+      <div id="header"></div>
+      <div class="isu-contents">
+        <div class="isu-contents-head">
+          <div class="isu-contents-head__start">
+            <h1>재배 목록</h1>
+          </div>
+          <div class="isu-contents-head__end">
+            <button
+              type="button"
+              class="btn btn-primary btn-lg"
+              style="width: 180px"
+            >
+              <i class="ico-plus me-2"></i>
+              재배 등록
+            </button>
+          </div>
+        </div>
+        <div class="isu-contents-search">
+          <div class="isu-contents-search-form">
+            <div class="isu-contents-search-form__item">
+              <label class="form-label">검색어</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="재배 명/레시피 명/등록자"
+                style="width: 360px"
+              />
+            </div>
+            <div class="isu-contents-search-form__item">
+              <label class="form-label">재배 상태</label>
+              <select class="form-select">
+                <option selected>전체</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </div>
+          <div class="isu-contents-search-button">
+            <button type="button" class="btn btn-dark" style="width: 120px">
+              조회
+            </button>
+          </div>
+        </div>
+        <div class="isu-contents-list">
+          <table class="table">
+            <colgroup>
+              <col style="width: 48px" />
+              <col style="width: 130px" />
+              <col style="width: 251px" />
+              <col style="width: 241px" />
+              <col style="width: 96px" />
+              <col style="width: 96px" />
+              <col style="width: 189px" />
+              <col style="width: 96px" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">번호</th>
+                <th scope="col">재배 번호</th>
+                <th scope="col">재배 명</th>
+                <th scope="col">레시피 명</th>
+                <th scope="col">재배 단계</th>
+                <th scope="col">재배 상태</th>
+                <th scope="col">재배 적용 기간</th>
+                <th scope="col">등록자</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>육묘 단계</td>
+                <td>등록</td>
+                <td>2024-03-26 ~ 2024-10-25</td>
+                <td>관리자</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>육묘 단계</td>
+                <td>등록</td>
+                <td>2024-03-26 ~ 2024-10-25</td>
+                <td>관리자</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>육묘 단계</td>
+                <td>등록</td>
+                <td>2024-03-26 ~ 2024-10-25</td>
+                <td>관리자</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>육묘 단계</td>
+                <td>등록</td>
+                <td>2024-03-26 ~ 2024-10-25</td>
+                <td>관리자</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>육묘 단계</td>
+                <td>등록</td>
+                <td>2024-03-26 ~ 2024-10-25</td>
+                <td>관리자</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>육묘 단계</td>
+                <td>등록</td>
+                <td>2024-03-26 ~ 2024-10-25</td>
+                <td>관리자</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>육묘 단계</td>
+                <td>등록</td>
+                <td>2024-03-26 ~ 2024-10-25</td>
+                <td>관리자</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>육묘 단계</td>
+                <td>등록</td>
+                <td>2024-03-26 ~ 2024-10-25</td>
+                <td>관리자</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>육묘 단계</td>
+                <td>등록</td>
+                <td>2024-03-26 ~ 2024-10-25</td>
+                <td>관리자</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><a href="">R00000000001</a></td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>설향 딸기 기본 레시피</td>
+                <td>육묘 단계</td>
+                <td>등록</td>
+                <td>2024-03-26 ~ 2024-10-25</td>
+                <td>관리자</td>
+              </tr>
+            </tbody>
+          </table>
+          <nav>
+            <ul class="pagination mb-0">
+              <li class="page-item">
+                <a class="page-link page-prev" href="#">이전 </a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item"><a class="page-link" href="#">6</a></li>
+              <li class="page-item"><a class="page-link" href="#">7</a></li>
+              <li class="page-item"><a class="page-link" href="#">8</a></li>
+              <li class="page-item"><a class="page-link" href="#">9</a></li>
+              <li class="page-item"><a class="page-link" href="#">10</a></li>
+              <li class="page-item">
+                <a class="page-link page-next" href="#"> 다음 </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div
+        style="
+          position: fixed;
+          bottom: 0;
+          right: 0;
+          padding: 20px;
+          background: rgba(0, 0, 0, 0.5);
+        "
+      >
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#modal01"
+        >
+          재배 관리 – 재배 등록(팝업)
+        </button>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="modal01" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-4" id="modal01Label">재배 등록</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="isu-form">
+                <div class="isu-form-item">
+                  <label class="form-label"
+                    >재배 명 <span class="required">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control form-control-lg w-100"
+                  />
+                </div>
+                <div class="isu-form-item">
+                  <label class="form-label"
+                    >레시피 선택 <span class="required">*</span></label
+                  >
+                  <select class="form-select">
+                    <option selected>전체</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="isu-form-item">
+                  <label class="form-label"
+                    >단계 <span class="required">*</span></label
+                  >
+                  <select class="form-select">
+                    <option selected>전체</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="isu-form-item">
+                  <label class="form-label"
+                    >재배 적용 기간 <span class="required">*</span></label
+                  >
+                  <div class="d-flex align-items-center">
+                    <input
+                      class="form-control flatpickr flatpickr-input"
+                      type="text"
+                      readonly="readonly"
+                    />
+                    <span class="mx-2">-</span>
+                    <input
+                      class="form-control flatpickr flatpickr-input"
+                      type="text"
+                      readonly="readonly"
+                    />
+                  </div>
+                </div>
+                <div class="isu-form-item">
+                  <label class="form-label">설명</label>
+                  <textarea
+                    class="form-control"
+                    style="height: 120px"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-lg btn-outline-secondary"
+                data-bs-dismiss="modal"
+                style="width: 120px"
+              >
+                취소
+              </button>
+              <button
+                type="button"
+                class="btn btn-lg btn-primary"
+                style="width: 120px"
+              >
+                등록
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

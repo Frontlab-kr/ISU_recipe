@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <!-- flatpickr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/ko.js"></script>
+    <!-- js -->
+    <script src="./assets/js/common.js"></script>
+
+    <link rel="stylesheet" href="./assets/scss/common.css" />
+  </head>
+  <body>
+    <div class="isu">
+      <div id="header"></div>
+      <div class="isu-contents">
+        <div class="isu-contents-head">
+          <div class="isu-contents-head__start">
+            <h1>재배구역 관리</h1>
+          </div>
+          <div class="isu-contents-head__end"></div>
+        </div>
+        <div class="d-flex align-items-end justify-content-between pb-1 mb-2">
+          <h3 class="mb-0">스마트루트 연결 정보</h3>
+          <button
+            type="button"
+            class="btn btn-primary ms-2"
+            style="min-width: 96px"
+          >
+            구역 정보 요청
+          </button>
+        </div>
+        <div class="isu-contents-view">
+          <table class="table">
+            <colgroup>
+              <col style="width: 200px" />
+              <col style="width: 1040px" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>서버 <span class="required">*</span></th>
+                <td>
+                  <select class="form-select w-auto">
+                    <option selected>전체</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>컨트롤러 <span class="required">*</span></th>
+                <td>
+                  <select class="form-select w-auto">
+                    <option selected>전체</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          구역별 재배 할당 정보<span
+            >(같은 재배가 설정된 구역은 재배 단계 변경 시 모두 같이 반영됩니다.)
+          </span>
+        </h3>
+      </div>
+    </div>
+  </body>
+</html>

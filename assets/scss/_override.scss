@@ -1,0 +1,78 @@
+html,
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.flatpickr {
+  &-input {
+    width: 148px;
+  }
+  &-months {
+    .flatpickr-month {
+      height: 48px !important;
+    }
+  }
+  &-current-month {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    .numInputWrapper {
+      display: inline-flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: auto;
+      input.cur-year {
+        width: 50px;
+      }
+      &::after {
+        content: '년';
+        display: inline;
+      }
+    }
+  }
+}
+.btn-primary {
+  color: #fff;
+  &:hover {
+    color: #fff;
+  }
+}
+.btn-outline-secondary {
+  color: #333;
+  border: solid 1px #b2b5bf;
+}
+.btn-sm {
+  height: 32px;
+}
+.pagination {
+  .page-item {
+  }
+  .page-prev {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-size: 0;
+    &::before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url(../images/pagination-prev.png) no-repeat 50% 50%;
+    }
+  }
+  .page-next {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-size: 0;
+    &::before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url(../images/pagination-next.png) no-repeat 50% 50%;
+    }
+  }
+}

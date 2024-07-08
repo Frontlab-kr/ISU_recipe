@@ -1,0 +1,63 @@
+<header class="isu-header">
+  <a href="index.html" class="isu-header__logo">레시피 관리 시스템</a>
+  <button type="button" class="btn btn-link btn-sm">
+    <i class="ico-user me-2"></i>
+    사용자 권한
+  </button>
+</header>
+<div class="isu-snb">
+  <div class="isu-snb-head">
+    <button onClick="snbToggle()">닫기</button>
+  </div>
+  <div class="isu-snb-item active">
+    <a href="">
+      <div class="isu-snb-item__icon">
+        <i class="ico-recipe"></i>
+        <i class="ico-recipe-active active"></i>
+      </div>
+      레시피 목록
+    </a>
+  </div>
+  <div class="isu-snb-item">
+    <button
+      class="btn btn-link btn-lg"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#group01"
+    >
+      <div class="isu-snb-item__icon">
+        <i class="ico-cultivate"></i>
+        <i class="ico-cultivate-active active"></i>
+      </div>
+      재배 관리
+    </button>
+    <div class="collapse" id="group01">
+      <ul>
+        <li><a href="">2 Depth 메뉴</a></li>
+        <li><a href="">2 Depth 메뉴</a></li>
+        <li><a href="">2 Depth 메뉴</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="isu-snb-item">
+    <button
+      class="btn btn-link btn-lg"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#group02"
+    >
+      <div class="isu-snb-item__icon">
+        <i class="ico-area"></i>
+        <i class="ico-area-active active"></i>
+      </div>
+      재배구역 관리
+    </button>
+    <div class="collapse" id="group02">
+      <ul>
+        <li><a href="">2 Depth 메뉴</a></li>
+        <li><a href="">2 Depth 메뉴</a></li>
+        <li><a href="">2 Depth 메뉴</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
