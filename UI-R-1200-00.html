@@ -85,6 +85,45 @@
             <li class="active">육모 단계</li>
             <li>분포 단계</li>
             <li>정리 단계</li>
+            <li>육모 단계</li>
+            <li>분포 단계</li>
+            <li>정리 단계</li>
+            <li>육모 단계</li>
+            <li>분포 단계</li>
+            <li>정리 단계</li>
+            <li>육모 단계</li>
+            <li>분포 단계</li>
+            <li>정리 단계</li>
+            <li>육모 단계</li>
+            <li>분포 단계</li>
+            <li>정리 단계</li>
+            <li>육모 단계</li>
+            <li>분포 단계</li>
+            <li>정리 단계</li>
+            <li>육모 단계</li>
+            <li>분포 단계</li>
+            <li>정리 단계</li>
+            <li>육모 단계</li>
+            <li>분포 단계</li>
+            <li>정리 단계</li>
+            <li>육모 단계</li>
+            <li>분포 단계</li>
+            <li>정리 단계</li>
+            <li>육모 단계</li>
+            <li>분포 단계</li>
+            <li>정리 단계</li>
+            <li>육모 단계</li>
+            <li>분포 단계</li>
+            <li>정리 단계</li>
+            <li>육모 단계</li>
+            <li>분포 단계</li>
+            <li>정리 단계</li>
+            <li>육모 단계</li>
+            <li>분포 단계</li>
+            <li>정리 단계</li>
+            <li>육모 단계</li>
+            <li>분포 단계</li>
+            <li>정리 단계</li>
           </ul>
         </div>
         <div class="isu-detail mb-4">
@@ -142,10 +181,10 @@
               <col style="width: 153px" />
               <col style="width: 400px" />
               <col style="width: 122px" />
-              <col style="width: 96px" />
-              <col style="width: 96px" />
-              <col style="width: 96px" />
-              <col style="width: 96px" />
+              <col />
+              <col />
+              <col />
+              <col />
             </colgroup>
             <thead>
               <tr>
@@ -242,6 +281,7 @@
           right: 0;
           padding: 20px;
           background: rgba(0, 0, 0, 0.5);
+          z-index: 100;
         "
       >
         <button
@@ -259,25 +299,16 @@
           data-bs-toggle="modal"
           data-bs-target="#modal02"
         >
-          레시피 삭제
-        </button>
-        <br />
-        <button
-          type="button"
-          class="btn btn-primary mt-2"
-          data-bs-toggle="modal"
-          data-bs-target="#modal03"
-        >
           파일 업로드 이력
         </button>
       </div>
 
       <!-- Modal -->
       <div class="modal fade" id="modal01" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-4" id="modal01Label">레시피 수정</h1>
+              <h1 class="modal-title fs-4">레시피 수정</h1>
               <button
                 type="button"
                 class="btn-close"
@@ -449,60 +480,10 @@ UAE 지역 수직농장 여름 재배용 죽항 레시피.
       </div>
 
       <div class="modal fade" id="modal02" tabindex="-1">
-        <div
-          class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm"
-        >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-4" id="modal02Label">레시피 삭제</h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="text-center pt-4">
-                (문구 예시)<br />
-                레시피 정보를 삭제하시겠습니까?<br />
-                지워진 레시피는 새 재배를 만들 때 목록에 표시되지 않습니다.<br />
-                이미 적용되어 운영중인 레시피에는 적용되지 않습니다.<br />
-                레시피는 지워지면 복구되지 않으므로<br />
-                삭제 전에 레시피 정보를 다운받기를 권합니다.
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-lg btn-outline-secondary"
-                data-bs-dismiss="modal"
-                style="width: 120px"
-              >
-                취소
-              </button>
-              <button
-                type="button"
-                class="btn btn-lg btn-primary"
-                data-bs-dismiss="modal"
-                style="width: 120px"
-              >
-                확인
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal fade" id="modal03" tabindex="-1">
-        <div
-          class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
-        >
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-4" id="modal03Label">
-                파일 업로드 이력
-              </h1>
+              <h1 class="modal-title fs-4">파일 업로드 이력</h1>
               <button
                 type="button"
                 class="btn-close"
@@ -511,7 +492,7 @@ UAE 지역 수직농장 여름 재배용 죽항 레시피.
               ></button>
             </div>
             <div class="modal-body pt-0">
-              <div class="isu-contents-list">
+              <div class="isu-contents-list" style="height: 627px">
                 <table class="table mb-0 border-top-0">
                   <colgroup>
                     <col style="width: 40px" />
@@ -535,8 +516,15 @@ UAE 지역 수직농장 여름 재배용 죽항 레시피.
                     <tr>
                       <td>1</td>
                       <td>F00000000001</td>
-                      <td>환경제어</td>
-                      <td><a href="">설향 딸기 기본 업로드 파일.xlsx</a></td>
+                      <td>환경제어환경제어환경제어환경제어환경제어</td>
+                      <td>
+                        <a href=""
+                          >설향 딸기 기본 업로드 설향 딸기 기본 업로드설향 딸기
+                          기본 업로드설향 딸기 기본 업로드설향 딸기 기본
+                          업로드설향 딸기 기본 업로드설향 딸기 기본 업로드설향
+                          딸기 기본 업로드설향 딸기 기본 업로드.xlsx</a
+                        >
+                      </td>
                       <td>관리자</td>
                       <td>2024-03-20 11:12:23</td>
                     </tr>
@@ -544,7 +532,12 @@ UAE 지역 수직농장 여름 재배용 죽항 레시피.
                       <td>1</td>
                       <td>F00000000001</td>
                       <td>환경제어</td>
-                      <td><a href="">설향 딸기 기본 업로드 파일.xlsx</a></td>
+                      <td>
+                        <a href=""
+                          >설향 딸기 기본 업로드 파일
+                          dddddddddddddddddddddddddddddddddddddddddddddddddddddddd.xlsx</a
+                        >
+                      </td>
                       <td>관리자</td>
                       <td>2024-03-20 11:12:23</td>
                     </tr>
@@ -559,11 +552,35 @@ UAE 지역 수직농장 여름 재배용 죽항 레시피.
                   </tbody>
                 </table>
               </div>
+              <nav class="mt-4">
+                <ul class="pagination mb-0">
+                  <li class="page-item">
+                    <a class="page-link page-prev" href="#">이전 </a>
+                  </li>
+                  <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item"><a class="page-link" href="#">6</a></li>
+                  <li class="page-item"><a class="page-link" href="#">7</a></li>
+                  <li class="page-item"><a class="page-link" href="#">8</a></li>
+                  <li class="page-item"><a class="page-link" href="#">9</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">10</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link page-next" href="#"> 다음 </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
             <div class="modal-footer">
               <button
                 type="button"
-                class="btn btn-lg btn-primary"
+                class="btn btn-lg btn-dark"
                 style="width: 120px"
               >
                 확인

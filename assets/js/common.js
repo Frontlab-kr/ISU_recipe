@@ -23,14 +23,15 @@ $(document).on('click', '.isu-snb-item .btn', function (e) {
 });
 
 $(document).ready(function () {
-  //flatpickr
-  $('.flatpickr-input').flatpickr({
-    dateFormat: 'Y-m-d',
-    locale: 'ko',
-  });
-  $('.flatpickr-inline').flatpickr({
-    dateFormat: 'Y-m-d',
-    locale: 'ko',
-    inline: true,
-  });
+  // //flatpickr
+  // $('.flatpickr-input').flatpickr({
+  //   dateFormat: 'Y-m-d',
+  //   locale: 'ko',
+  //   allowInput: true,
+  // });
+  // $('.flatpickr-inline').flatpickr({
+  //   dateFormat: 'Y-m-d',
+  //   locale: 'ko',
+  //   inline: true,
+  // });
 });

@@ -5,6 +5,12 @@ body {
 a {
   text-decoration: none;
 }
+textarea {
+  resize: none;
+}
+.fs-14 {
+  font-size: 14px !important;
+}
 .flatpickr {
   &-input {
     width: 148px;
@@ -12,6 +18,27 @@ a {
   &-months {
     .flatpickr-month {
       height: 48px !important;
+    }
+    .numInputWrapper span.arrowUp {
+      top: 4px;
+    }
+    .numInputWrapper {
+      &:hover {
+        background: none;
+      }
+    }
+  }
+  &-prev-month,
+  &-next-month {
+    top: 4px;
+    svg {
+      fill: #000;
+    }
+    &:hover {
+      svg {
+        fill: #000 !important;
+        opacity: 0.6;
+      }
     }
   }
   &-current-month {
@@ -23,14 +50,27 @@ a {
       justify-content: flex-end;
       align-items: center;
       width: auto;
+      span {
+        margin-right: 4px;
+        border: none;
+      }
       input.cur-year {
         width: 50px;
       }
       &::after {
+        position: relative;
+        top: 1px;
         content: '년';
         display: inline;
+        margin-right: 24px;
       }
     }
+  }
+}
+.btn {
+  min-width: 96px;
+  &-sm {
+    min-width: auto;
   }
 }
 .btn-primary {
@@ -74,5 +114,111 @@ a {
       height: 16px;
       background: url(../images/pagination-next.png) no-repeat 50% 50%;
     }
+  }
+}
+.modal {
+  &-header {
+    padding-top: 30px;
+  }
+  &-body {
+    padding-top: 24px;
+  }
+  &-content {
+    padding: 0 40px;
+    border-radius: 24px;
+  }
+  &-alert {
+    width: 416px;
+    .modal-content {
+      padding: 0 20px;
+      border-radius: 24px;
+      box-shadow: 0px 5px 14.1px 1.9px rgba(104, 143, 163, 0.15);
+    }
+    .modal-header {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      padding: 42px 0 16px 0;
+      border-bottom: none;
+      border-radius: 0;
+    }
+    .modal-title {
+      font-size: 20px !important;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.6px;
+      text-align: center;
+      color: #30374d;
+    }
+    .modal-footer {
+      padding-bottom: 35px;
+    }
+    .btn-close {
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      width: 40px;
+      height: 40px;
+      background: url(../images/modal-close.png) no-repeat 50% 50%;
+      opacity: 1;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    .modal-body {
+      padding: 0;
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: -0.48px;
+      text-align: center;
+      color: #131313;
+    }
+  }
+}
+
+.flatpickr-month {
+  .numInputWrapper span {
+    opacity: 1;
+  }
+}
+.flatpickr-day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 40px;
+  height: 40px;
+  line-height: auto;
+  margin: 4px 0;
+  border-radius: 8px;
+  &.today {
+    background-color: #287efc;
+    border: none;
+    color: #fff;
+  }
+  &.dayComplete {
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      width: 4px;
+      height: 4px;
+      border-radius: 4px;
+      background-color: #287efc;
+      transform: translateX(-50%);
+    }
+  }
+  &.dayPast {
+    background-color: #eeeff0;
+  }
+  &.dayFuture {
+    border: solid 1px #bfd9ff;
   }
 }
