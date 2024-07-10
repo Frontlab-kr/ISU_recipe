@@ -290,15 +290,20 @@
                     <input
                       class="form-control flatpickr flatpickr-input"
                       type="text"
-                      readonly="readonly"
                     />
                     <span class="mx-2">-</span>
                     <input
                       class="form-control flatpickr flatpickr-input"
                       type="text"
-                      readonly="readonly"
                     />
                   </div>
+                  <script>
+                    $('.flatpickr-input').flatpickr({
+                      dateFormat: 'Y-m-d',
+                      locale: 'ko',
+                      allowInput: true,
+                    });
+                  </script>
                 </div>
                 <div class="isu-form-item">
                   <label class="form-label">설명</label>

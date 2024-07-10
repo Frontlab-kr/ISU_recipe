@@ -12104,6 +12104,7 @@ textarea {
 }
 .modal-body {
   padding-top: 24px;
+  overflow: hidden;
 }
 .modal-content {
   padding: 0 40px;
@@ -12279,7 +12280,7 @@ textarea {
 }
 
 .isu {
-  min-width: 1400px;
+  min-width: 1500px;
   padding-top: 60px;
 }
 .isu-accordion-head {
@@ -12375,6 +12376,7 @@ textarea {
   width: 240px;
   padding: 0 16px;
   transition: all 0.2s ease;
+  z-index: 20;
 }
 .isu-snb-head {
   margin-bottom: 16px;
@@ -12648,6 +12650,9 @@ textarea {
 .isu-contents-info-item ul li:first-child::before {
   display: none;
 }
+.isu-contents-list {
+  overflow: hidden;
+}
 .isu-contents-list .table {
   margin-bottom: 24px;
   border-top: 2px solid #30374d;
@@ -12664,6 +12669,7 @@ textarea {
   letter-spacing: -0.48px;
   text-align: center;
   color: #131313;
+  white-space: noWrap;
 }
 .isu-contents-list .table tbody tr td {
   padding: 18px 8px;
