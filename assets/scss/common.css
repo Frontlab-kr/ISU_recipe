@@ -12377,6 +12377,7 @@ textarea {
   padding: 0 16px;
   transition: all 0.2s ease;
   z-index: 20;
+  overflow: hidden;
 }
 .isu-snb-head {
   margin-bottom: 16px;

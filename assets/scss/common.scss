@@ -118,6 +118,7 @@
     padding: 0 16px;
     transition: all 0.2s ease;
     z-index: 20;
+    overflow: hidden;
     &-head {
       margin-bottom: 16px;
       border-bottom: 1px solid $gray-200;
