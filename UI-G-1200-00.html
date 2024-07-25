@@ -199,208 +199,224 @@
               class="isu-history-contents overflow-auto"
               style="max-height: 600px"
             >
-              <div class="isu-form">
-                <div class="isu-form-item">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <div class="isu-form-item">
+                      <div
+                        class="d-flex align-items-end justify-content-between mb-2"
+                      >
+                        <label class="form-label mb-0"
+                          >할 일
+                          <span class="badge text-bg-primary text-white ms-1"
+                            >완료</span
+                          >
+                        </label>
+                        <div class="d-flex">
+                          <button
+                            type="button"
+                            class="btn btn-dark btn-sm ms-1"
+                          >
+                            완료 처리
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-outline-secondary btn-sm ms-1"
+                          >
+                            수정
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-outline-secondary btn-sm ms-1"
+                          >
+                            삭제
+                          </button>
+                        </div>
+                      </div>
+                      <div
+                        class="accordion-header__button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                      >
+                        <input
+                          type="text"
+                          class="form-control form-control-lg w-100"
+                          value="구역 온도 설정 3도 낮추기"
+                          readonly
+                        />
+                      </div>
+                    </div>
+                  </h2>
                   <div
-                    class="d-flex align-items-end justify-content-between mb-2"
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#accordionExample"
                   >
-                    <label class="form-label mb-0"
-                      >할 일
-                      <span class="badge text-bg-primary text-white ms-1"
-                        >완료</span
-                      >
-                    </label>
-                    <div class="d-flex">
-                      <button type="button" class="btn btn-dark btn-sm ms-1">
-                        완료 처리
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-outline-secondary btn-sm ms-1"
-                      >
-                        수정
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-outline-secondary btn-sm ms-1"
-                      >
-                        삭제
-                      </button>
-                    </div>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control form-control-lg w-100"
-                    value="구역 온도 설정 3도 낮추기"
-                    readonly
-                  />
-                </div>
-                <div class="isu-form-item">
-                  <label class="form-label">요청 정보</label>
-                  <textarea class="form-control" style="height: 72px">
-모든 구역의 온도를 지금보다 3도 낮춥니다.
-스마트루트의  로직 > 온도 화면에서 수행합니다. 온도 설정 결과 화면을 공유 해 주세요.                  
-              </textarea
-                  >
-                </div>
-                <div class="isu-form-item">
-                  <div class="isu-history-list">
-                    <label class="form-label">요청 정보</label>
-                    <div class="isu-history-list-item">
-                      <p>
-                        3도 낮췄습니다. 2도면 충분할 것 같습니다만 생육상태 계속
-                        관찰하겠습니다.
-                        <span>05/21 12:24:12</span>
-                      </p>
-                    </div>
-                    <div class="isu-history-list-item">
-                      <p>
-                        추가로 2도 더 낮췄습니다.
-                        <span>05/21 12:24:12</span>
-                      </p>
-                    </div>
-                    <label class="form-label">진행 상황</label>
-                    <div class="isu-history-list-item">
-                      <p>
-                        3도 낮췄습니다. 2도면 충분할 것 같습니다만 생육상태 계속
-                        관찰하겠습니다.
-                        <span>05/21 12:24:12</span>
-                      </p>
-                    </div>
-                    <div class="isu-history-list-item">
-                      <p>
-                        추가로 2도 더 낮췄습니다.
-                        <span>05/21 12:24:12</span>
-                      </p>
-                    </div>
-                    <div
-                      class="isu-history-list-item isu-history-list-item--my"
-                    >
-                      <p>
-                        3도 낮췄습니다. 2도면 충분할 것 같습니다만 생육상태 계속
-                        관찰하겠습니다.
-                        <span>05/21 12:24:12</span>
-                      </p>
-                    </div>
-                    <div
-                      class="isu-history-list-item isu-history-list-item--my"
-                    >
-                      <p>
-                        추가로 2도 더 낮췄습니다.
-                        <span>05/21 12:24:12</span>
-                      </p>
-                    </div>
+                    <div class="accordion-body">
+                      <div class="isu-form-item">
+                        <label class="form-label">요청 정보</label>
+                        <textarea class="form-control" style="height: 72px">
+      모든 구역의 온도를 지금보다 3도 낮춥니다.
+      스마트루트의  로직 > 온도 화면에서 수행합니다. 온도 설정 결과 화면을 공유 해 주세요.                  
+                    </textarea
+                        >
+                      </div>
+                      <div class="isu-form-item">
+                        <div class="isu-history-list">
+                          <label class="form-label">진행 상황</label>
+                          <div class="isu-history-list-item">
+                            <p>
+                              3도 낮췄습니다. 2도면 충분할 것 같습니다만
+                              생육상태 계속 관찰하겠습니다.
+                              <span>05/21 12:24:12</span>
+                            </p>
+                          </div>
+                          <div class="isu-history-list-item">
+                            <p>
+                              추가로 2도 더 낮췄습니다.
+                              <span>05/21 12:24:12</span>
+                            </p>
+                          </div>
+                          <div
+                            class="isu-history-list-item isu-history-list-item--my"
+                          >
+                            <p>
+                              3도 낮췄습니다. 2도면 충분할 것 같습니다만
+                              생육상태 계속 관찰하겠습니다.
+                              <span>05/21 12:24:12</span>
+                            </p>
+                          </div>
+                          <div
+                            class="isu-history-list-item isu-history-list-item--my"
+                          >
+                            <p>
+                              추가로 2도 더 낮췄습니다.
+                              <span>05/21 12:24:12</span>
+                            </p>
+                          </div>
 
-                    <div class="input-group mb-3">
-                      <input
-                        type="text"
-                        class="form-control form-control-lg"
-                        placeholder="전송 메세지 입력"
-                      />
-                      <button class="btn btn-dark" type="button">전송</button>
+                          <div class="input-group mb-3">
+                            <input
+                              type="text"
+                              class="form-control form-control-lg"
+                              placeholder="전송 메세지 입력"
+                            />
+                            <button class="btn btn-dark" type="button">
+                              전송
+                            </button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="isu-form">
-                <div class="isu-form-item">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <div class="isu-form-item">
+                      <div
+                        class="d-flex align-items-end justify-content-between mb-2"
+                      >
+                        <label class="form-label mb-0"
+                          >할 일
+                          <span class="badge text-bg-primary text-white ms-1"
+                            >완료</span
+                          >
+                        </label>
+                        <div class="d-flex">
+                          <button
+                            type="button"
+                            class="btn btn-dark btn-sm ms-1"
+                          >
+                            완료 처리
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-outline-secondary btn-sm ms-1"
+                          >
+                            수정
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-outline-secondary btn-sm ms-1"
+                          >
+                            삭제
+                          </button>
+                        </div>
+                      </div>
+                      <div
+                        class="accordion-header__button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                      >
+                        <input
+                          type="text"
+                          class="form-control form-control-lg w-100"
+                          value="구역 온도 설정 3도 낮추기"
+                          readonly
+                        />
+                      </div>
+                    </div>
+                  </h2>
                   <div
-                    class="d-flex align-items-end justify-content-between mb-2"
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample"
                   >
-                    <label class="form-label mb-0"
-                      >할 일
-                      <span class="badge text-bg-primary text-white ms-1"
-                        >완료</span
-                      >
-                    </label>
-                    <div class="d-flex">
-                      <button type="button" class="btn btn-dark btn-sm ms-1">
-                        완료 처리
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-outline-secondary btn-sm ms-1"
-                      >
-                        수정
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-outline-secondary btn-sm ms-1"
-                      >
-                        삭제
-                      </button>
-                    </div>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control form-control-lg w-100"
-                    value="구역 온도 설정 3도 낮추기"
-                    readonly
-                  />
-                </div>
-                <div class="isu-form-item">
-                  <label class="form-label">요청 정보</label>
-                  <textarea class="form-control" style="height: 72px">
-모든 구역의 온도를 지금보다 3도 낮춥니다.
-스마트루트의  로직 > 온도 화면에서 수행합니다. 온도 설정 결과 화면을 공유 해 주세요.                  
-                </textarea
-                  >
-                </div>
-                <div class="isu-form-item">
-                  <div class="isu-history-list">
-                    <label class="form-label">요청 정보</label>
-                    <div class="isu-history-list-item">
-                      <p>
-                        3도 낮췄습니다. 2도면 충분할 것 같습니다만 생육상태 계속
-                        관찰하겠습니다.
-                        <span>05/21 12:24:12</span>
-                      </p>
-                    </div>
-                    <div class="isu-history-list-item">
-                      <p>
-                        추가로 2도 더 낮췄습니다.
-                        <span>05/21 12:24:12</span>
-                      </p>
-                    </div>
-                    <label class="form-label">진행 상황</label>
-                    <div class="isu-history-list-item">
-                      <p>
-                        3도 낮췄습니다. 2도면 충분할 것 같습니다만 생육상태 계속
-                        관찰하겠습니다.
-                        <span>05/21 12:24:12</span>
-                      </p>
-                    </div>
-                    <div class="isu-history-list-item">
-                      <p>
-                        추가로 2도 더 낮췄습니다.
-                        <span>05/21 12:24:12</span>
-                      </p>
-                    </div>
-                    <div
-                      class="isu-history-list-item isu-history-list-item--my"
-                    >
-                      <p>
-                        3도 낮췄습니다. 2도면 충분할 것 같습니다만 생육상태 계속
-                        관찰하겠습니다.
-                        <span>05/21 12:24:12</span>
-                      </p>
-                    </div>
-                    <div
-                      class="isu-history-list-item isu-history-list-item--my"
-                    >
-                      <p>
-                        추가로 2도 더 낮췄습니다.
-                        <span>05/21 12:24:12</span>
-                      </p>
-                    </div>
+                    <div class="accordion-body">
+                      <div class="isu-form-item">
+                        <label class="form-label">요청 정보</label>
+                        <textarea class="form-control" style="height: 72px">
+    모든 구역의 온도를 지금보다 3도 낮춥니다.
+    스마트루트의  로직 > 온도 화면에서 수행합니다. 온도 설정 결과 화면을 공유 해 주세요.                  
+                  </textarea
+                        >
+                      </div>
+                      <div class="isu-form-item">
+                        <div class="isu-history-list">
+                          <label class="form-label">진행 상황</label>
+                          <div class="isu-history-list-item">
+                            <p>
+                              3도 낮췄습니다. 2도면 충분할 것 같습니다만
+                              생육상태 계속 관찰하겠습니다.
+                              <span>05/21 12:24:12</span>
+                            </p>
+                          </div>
+                          <div class="isu-history-list-item">
+                            <p>
+                              추가로 2도 더 낮췄습니다.
+                              <span>05/21 12:24:12</span>
+                            </p>
+                          </div>
+                          <div
+                            class="isu-history-list-item isu-history-list-item--my"
+                          >
+                            <p>
+                              3도 낮췄습니다. 2도면 충분할 것 같습니다만
+                              생육상태 계속 관찰하겠습니다.
+                              <span>05/21 12:24:12</span>
+                            </p>
+                          </div>
+                          <div
+                            class="isu-history-list-item isu-history-list-item--my"
+                          >
+                            <p>
+                              추가로 2도 더 낮췄습니다.
+                              <span>05/21 12:24:12</span>
+                            </p>
+                          </div>
 
-                    <div class="input-group mb-3">
-                      <input
-                        type="text"
-                        class="form-control form-control-lg"
-                        placeholder="전송 메세지 입력"
-                      />
-                      <button class="btn btn-dark" type="button">전송</button>
+                          <div class="input-group mb-3">
+                            <input
+                              type="text"
+                              class="form-control form-control-lg"
+                              placeholder="전송 메세지 입력"
+                            />
+                            <button class="btn btn-dark" type="button">
+                              전송
+                            </button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
