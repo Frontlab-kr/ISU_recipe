@@ -508,6 +508,15 @@
           재배 관리 – 재배 수정(팝업)
         </button>
         <br />
+        <button
+          type="button"
+          class="btn btn-primary mt-2"
+          data-bs-toggle="modal"
+          data-bs-target="#modal04"
+        >
+          재배 관리 – 재배 가이드(팝업)
+        </button>
+        <br />
       </div>
 
       <!-- Modal -->
@@ -560,8 +569,8 @@
           </div>
         </div>
       </div>
-      <div class="modal fade" id="modal02" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
+      <div class="modal fade" id="modal02" tabindex="-1" data-bs-focus="false">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-4">할 일 등록</h1>
@@ -570,6 +579,7 @@
                 class="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
+                id="hideModal02"
               ></button>
             </div>
             <div class="modal-body">
@@ -713,6 +723,80 @@
                     class="form-control form-control-lg w-100"
                   />
                 </div>
+                <div class="isu-form-item">
+                  <div class="d-flex align-items-center mb-2">
+                    <label class="form-label m-0"> 재배 태그</label>
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary btn-sm ms-2"
+                      onclick="$('#modal04').addClass('show').show();$('.modal-bg').addClass('active')"
+                    >
+                      재배 태그 선택
+                    </button>
+                  </div>
+                  <div class="border rounded p-2">
+                    <span class="badge text-bg-secondary">
+                      EC
+                      <button class="border-0 bg-transparent w-auto p-0 ms-2">
+                        <img src="./assets/images/close.svg" alt="" />
+                      </button>
+                    </span>
+                    <span class="badge text-bg-secondary">
+                      PH
+                      <button class="border-0 bg-transparent w-auto p-0 ms-2">
+                        <img src="./assets/images/close.svg" alt="" />
+                      </button>
+                    </span>
+                    <span class="badge text-bg-secondary">
+                      측정
+                      <button class="border-0 bg-transparent w-auto p-0 ms-2">
+                        <img src="./assets/images/close.svg" alt="" />
+                      </button>
+                    </span>
+                    <span class="badge text-bg-secondary">
+                      딸기 재배에 필요한 정보
+                      <button class="border-0 bg-transparent w-auto p-0 ms-2">
+                        <img src="./assets/images/close.svg" alt="" />
+                      </button>
+                    </span>
+                    <span class="badge text-bg-secondary">
+                      상추 재배에 필요한 정보
+                      <button class="border-0 bg-transparent w-auto p-0 ms-2">
+                        <img src="./assets/images/close.svg" alt="" />
+                      </button>
+                    </span>
+                    <span class="badge text-bg-secondary">
+                      EC
+                      <button class="border-0 bg-transparent w-auto p-0 ms-2">
+                        <img src="./assets/images/close.svg" alt="" />
+                      </button>
+                    </span>
+                    <span class="badge text-bg-secondary">
+                      PH
+                      <button class="border-0 bg-transparent w-auto p-0 ms-2">
+                        <img src="./assets/images/close.svg" alt="" />
+                      </button>
+                    </span>
+                    <span class="badge text-bg-secondary">
+                      측정
+                      <button class="border-0 bg-transparent w-auto p-0 ms-2">
+                        <img src="./assets/images/close.svg" alt="" />
+                      </button>
+                    </span>
+                    <span class="badge text-bg-secondary">
+                      딸기 재배에 필요한 정보
+                      <button class="border-0 bg-transparent w-auto p-0 ms-2">
+                        <img src="./assets/images/close.svg" alt="" />
+                      </button>
+                    </span>
+                    <span class="badge text-bg-secondary">
+                      상추 재배에 필요한 정보
+                      <button class="border-0 bg-transparent w-auto p-0 ms-2">
+                        <img src="./assets/images/close.svg" alt="" />
+                      </button>
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="modal-footer">
@@ -814,6 +898,168 @@ UAE 지역 수직농장 여름 재배용 죽항 레시피.
           </div>
         </div>
       </div>
+      <div class="modal fade" id="modal04" tabindex="-1" style="z-index: 1060">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-4">재배 가이드</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                onclick="$('#modal04').removeClass('show').hide();$('.modal-bg').removeClass('active')"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="isu-contents-search">
+                <div class="isu-contents-search-form">
+                  <div class="isu-contents-search-form__item">
+                    <label class="form-label">가이드 태그명</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="isu-contents-search-form__item">
+                    <label class="form-label">가이드 제목</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+                <div class="isu-contents-search-button">
+                  <button
+                    type="button"
+                    class="btn btn-dark"
+                    style="width: 120px"
+                  >
+                    조회
+                  </button>
+                </div>
+              </div>
+              <div class="isu-contents-list">
+                <table class="table">
+                  <colgroup>
+                    <col style="width: 10%" />
+                    <col style="width: 30%" />
+                    <col style="width: 30%" />
+                    <col style="width: 30%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">번호</th>
+                      <th scope="col">가이드 태그명</th>
+                      <th scope="col">가이드 제목</th>
+                      <th scope="col">링크</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td class="white-space-normal text-start">
+                        <a href="">
+                          EC, PH, 측정, 딸기 ,EC, PH, 측정, 딸기 ,EC, PH, 측정,
+                          딸기 ,EC, PH, 측정, 딸기 ,EC, PH, 측정, 딸기 ,EC, PH,
+                          측정, 딸기 ,</a
+                        >
+                      </td>
+                      <td>EC, PH 측정법 영상</td>
+                      <td>https://www.youtube.com/watch?v=z_wbJYWsOF4</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td class="white-space-normal text-start">
+                        <a href=""> EC, PH, 측정, 딸기 </a>
+                      </td>
+                      <td>EC, PH 측정법 영상</td>
+                      <td>https://www.youtube.com/watch?v=z_wbJYWsOF4</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td class="white-space-normal text-start">
+                        <a href=""> EC, PH, 측정, 딸기 </a>
+                      </td>
+                      <td>EC, PH 측정법 영상</td>
+                      <td>https://www.youtube.com/watch?v=z_wbJYWsOF4</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td class="white-space-normal text-start">
+                        <a href=""> EC, PH, 측정, 딸기 </a>
+                      </td>
+                      <td>EC, PH 측정법 영상</td>
+                      <td>https://www.youtube.com/watch?v=z_wbJYWsOF4</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td class="white-space-normal text-start">
+                        <a href=""> EC, PH, 측정, 딸기 </a>
+                      </td>
+                      <td>EC, PH 측정법 영상</td>
+                      <td>https://www.youtube.com/watch?v=z_wbJYWsOF4</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td class="white-space-normal text-start">
+                        <a href=""> EC, PH, 측정, 딸기 </a>
+                      </td>
+                      <td>EC, PH 측정법 영상</td>
+                      <td>https://www.youtube.com/watch?v=z_wbJYWsOF4</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <nav>
+                  <ul class="pagination mb-0">
+                    <li class="page-item">
+                      <a class="page-link page-prev" href="#">이전 </a>
+                    </li>
+                    <li class="page-item active">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">4</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">5</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">6</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">7</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">8</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">9</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">10</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link page-next" href="#"> 다음 </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-lg btn-primary"
+                style="width: 120px"
+                onclick="$('#modal04').removeClass('show').hide();$('.modal-bg').removeClass('active')"
+              >
+                확인
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-bg"></div>
     </div>
   </body>
 </html>

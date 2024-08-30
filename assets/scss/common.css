@@ -12164,6 +12164,31 @@ textarea {
   color: #131313;
 }
 
+.white-space-normal {
+  white-space: normal !important;
+}
+
+.modal-bg {
+  --bs-backdrop-zindex: 1050;
+  --bs-backdrop-bg: #000;
+  --bs-backdrop-opacity: 0.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--bs-backdrop-zindex);
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bs-backdrop-bg);
+  opacity: 0;
+  transition: opacity 0.15s linear;
+  visibility: hidden;
+}
+.modal-bg.active {
+  opacity: 0.5;
+  z-index: 1055;
+  visibility: visible;
+}
+
 .flatpickr-month .numInputWrapper span {
   opacity: 1;
 }
